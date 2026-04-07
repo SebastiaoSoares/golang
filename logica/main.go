@@ -9,7 +9,7 @@ func main() {
 
 	var ex int
 
-	fmt.Print("Escolha o exercício a ser executado (de 1 a 7): ")
+	fmt.Print("Escolha o exercício a ser executado (de 1 a 8): ")
 	fmt.Scan(&ex)
 
 	switch ex {
@@ -27,6 +27,8 @@ func main() {
 		exercicios.Ex6()
 	case 7:
 		exercicios.Ex7()
+	case 8:
+		exercicios.Ex8()
 
 	default:
 		fmt.Print("Esse ainda não existe.")

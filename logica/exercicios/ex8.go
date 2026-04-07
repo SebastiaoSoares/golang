@@ -21,10 +21,10 @@ func Ex8() {
 
 	fmt.Print("Meu Slice de número aleatórios (de 1 a 100): ")
 
-	for i := 0; i <= 10; i++ {
-		rand := rand.Intn(100)+1
-		numeros = append(numeros, rand)
-		fmt.Printf("%d ", rand)
+	for i := 0; i < 10; i++ {
+		random := rand.Intn(100)+1
+		numeros = append(numeros, random)
+		fmt.Printf("%d ", random)
 	}
 
 	for i, n := range numeros {

@@ -1,37 +1,41 @@
 // 9. Filtro de Pares:
-// Receba um slice_original de números. Crie uma função
-// que retorne um novo slice_original contendo apenas
-// os números pares do slice_original original.
+// Receba um slice de números. Crie uma função
+// que retorne um novo slice contendo apenas
+// os números pares do slice original.
 
 package exercicios
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func Ex9() {
 
 	var (
-		tam_slice, num int
-		slice_original, slice_par []int
+		tamSlice, num int
+		slice []int
 	)
 
 	fmt.Printf("Tamanho do Slice: ")
-	fmt.Scan(&tam_slice)
+	fmt.Scan(&tamSlice)
 
-	for i := range tam_slice {
+	for i := range tamSlice {
 		fmt.Printf("Informe o %dº elemento: ", i+1)
 		fmt.Scan(&num)
-		slice_original = append(slice_original, num)
-	}
-
-	for _, n := range slice_original {
-		if n % 2 == 0 {
-			slice_par = append(slice_par, n)
-		}
+		slice = append(slice, num)
 	}
 
 	fmt.Printf("\nO Slice apenas com os números pares é o seguinte: ")
-	fmt.Print(slice_par)
+	fmt.Print(coletaPares(slice))
 
+}
+
+func coletaPares(sliceOriginal []int) []int {
+	var slicePar []int
+
+	for _, n := range sliceOriginal {
+		if n % 2 == 0 {
+			slicePar = append(slicePar, n)
+		}
+	}
+
+	return slicePar
 }
